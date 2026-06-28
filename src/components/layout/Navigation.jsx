@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from '../../utils/gsap';
+import logoImg from '../../assets/logo.PNG';
 import styles from './Navigation.module.scss';
 
 const navLinks = [
@@ -60,8 +61,7 @@ export default function Navigation() {
       >
         <div className={styles.inner}>
           <a href="#" className={styles.logo} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            <span className={styles.logoIcon}>S</span>
-            <span className={styles.logoText}>SKYLINE</span>
+            <img src={logoImg} alt="Skyline Builders" className={styles.logoImg} />
           </a>
 
           <div className={styles.links}>

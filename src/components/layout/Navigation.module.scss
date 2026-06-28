@@ -27,28 +27,13 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
 }
 
-.logoIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  font-size: 1rem;
-  font-weight: var(--fw-black);
-  letter-spacing: var(--ls-wide);
-}
-
-.logoText {
-  font-size: 0.8rem;
-  font-weight: var(--fw-bold);
-  letter-spacing: var(--ls-wide);
-  color: var(--color-text);
+.logoImg {
+  height: 140px;
+  width: 140px;
+  object-fit: contain;
 }
 
 .links {

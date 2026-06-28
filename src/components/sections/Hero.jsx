@@ -1,8 +1,7 @@
-import { useEffect, useRef, lazy, Suspense } from 'react';
+import { useEffect, useRef, Suspense } from 'react';
 import { gsap } from '../../utils/gsap';
+import SkylineScene from '../three/SkylineScene';
 import styles from './Hero.module.scss';
-
-const SkylineScene = lazy(() => import('../three/SkylineScene'));
 
 export default function Hero() {
   const sectionRef = useRef(null);
@@ -12,25 +11,29 @@ export default function Hero() {
   const scrollRef = useRef(null);
   const overlayRef = useRef(null);
   const particlesRef = useRef(null);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.5 });
+      gsap.set(contentRef.current, { opacity: 0 });
+      gsap.set(scrollRef.current, { opacity: 0 });
 
-      tl.from(overlayRef.current, {
-        scaleY: 1,
+      const tl = gsap.timeline({ delay: 0.3 });
+
+      tl.to(overlayRef.current, {
+        scaleY: 0,
         duration: 1.5,
         ease: 'power4.inOut',
         transformOrigin: 'top',
-      })
-        .from(scrollRef.current, {
-          opacity: 0,
-          y: -20,
-          duration: 0.8,
-        }, '-=0.3');
+      });
+
+      tl.to(contentRef.current, {
+        opacity: 1,
+        duration: 0.01,
+      }, '-=0.3');
 
       const words = headlineRef.current?.querySelectorAll('.word');
-      if (words) {
+      if (words?.length) {
         tl.from(words, {
           y: 120,
           opacity: 0,
@@ -38,11 +41,11 @@ export default function Hero() {
           stagger: 0.12,
           duration: 1.2,
           ease: 'power4.out',
-        }, '-=0.5');
+        }, '-=0.2');
       }
 
       const subWords = subRef.current?.querySelectorAll('.sub-word');
-      if (subWords) {
+      if (subWords?.length) {
         tl.from(subWords, {
           y: 60,
           opacity: 0,
@@ -62,6 +65,11 @@ export default function Hero() {
         }, '-=0.4');
       }
 
+      tl.to(scrollRef.current, {
+        opacity: 1,
+        duration: 0.6,
+      }, '-=0.2');
+
       if (particlesRef.current) {
         gsap.from(particlesRef.current.children, {
           opacity: 0,
@@ -79,7 +87,6 @@ export default function Hero() {
           start: 'top top',
           end: 'bottom top',
           scrub: 1.5,
-          pin: false,
         },
         scale: 1.1,
         y: 100,
@@ -93,12 +100,8 @@ export default function Hero() {
 
   return (
     <section ref={sectionRef} className={styles.hero} id="hero">
-      <div ref={overlayRef} className={styles.overlay} aria-hidden="true" />
-
       <div className={styles.canvasContainer}>
-        <Suspense fallback={null}>
-          <SkylineScene />
-        </Suspense>
+        <SkylineScene />
       </div>
 
       <div className={styles.fogLayer} aria-hidden="true" />
@@ -119,7 +122,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className={styles.content}>
+      <div ref={contentRef} className={styles.content}>
         <div ref={headlineRef} className={styles.headline}>
           <span className="word-wrapper"><span className="word">Building</span></span>{' '}
           <span className="word-wrapper"><span className="word">Tomorrow's</span></span>{' '}
@@ -151,6 +154,8 @@ export default function Hero() {
         <div className={styles.scrollLine} />
         <span className={styles.scrollText}>Scroll</span>
       </div>
+
+      <div ref={overlayRef} className={styles.overlay} aria-hidden="true" />
     </section>
   );
 }

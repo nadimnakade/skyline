@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '../../utils/gsap';
+import logoImg from '../../assets/logo.PNG';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -56,8 +57,7 @@ export default function Footer() {
         <div className={styles.footerContent}>
           <div className={styles.footerTop}>
             <div className={styles.footerLogo}>
-              <span className={styles.logoMark}>S</span>
-              <span className={styles.logoName}>SKYLINE<br />BUILDERS</span>
+              <img src={logoImg} alt="Skyline Builders" className={styles.logoImg} />
             </div>
 
             <div className={styles.footerLinks}>
