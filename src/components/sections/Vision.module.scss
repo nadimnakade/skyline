@@ -1,0 +1,154 @@
+.vision {
+  position: relative;
+  padding: var(--section-padding) 0;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+}
+
+.topContent {
+  margin-bottom: clamp(4rem, 8vh, 8rem);
+}
+
+.visionLabel {
+  display: inline-block;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.25rem;
+    height: 1px;
+    background: var(--color-primary);
+  }
+}
+
+.textWrap {
+  overflow: hidden;
+}
+
+.visionText {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+
+  &.primary {
+    color: var(--color-primary);
+  }
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-bottom: clamp(4rem, 8vh, 8rem);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &.offset {
+    margin-top: clamp(3rem, 6vh, 6rem);
+  }
+}
+
+.revealImage {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s var(--ease-out-expo);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &.tall {
+    aspect-ratio: 3/4;
+
+    @media (max-width: 768px) {
+      aspect-ratio: 4/3;
+    }
+  }
+
+  &:not(.tall) {
+    aspect-ratio: 4/3;
+  }
+}
+
+.parallaxImg {
+  will-change: transform;
+}
+
+.textContent {
+  padding: 0.5rem 0;
+
+  p {
+    font-size: var(--fs-body);
+    color: var(--color-muted);
+    line-height: 1.8;
+    max-width: 450px;
+  }
+}
+
+.quoteBlock {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.quoteLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 1px;
+  }
+}
+
+.quote {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  color: var(--color-secondary);
+  line-height: 1.6;
+  text-align: center;
+}

@@ -1,0 +1,185 @@
+.experience {
+  position: relative;
+  padding: var(--section-padding) 0;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.25rem;
+    height: 1px;
+    background: var(--color-primary);
+  }
+}
+
+.sectionTitle {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+  margin-bottom: clamp(4rem, 8vh, 8rem);
+}
+
+.track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: clamp(4rem, 8vh, 8rem);
+}
+
+.connector {
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--color-primary), rgba(212, 175, 55, 0.2));
+
+  @media (max-width: 768px) {
+    left: 18px;
+  }
+}
+
+.milestone {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+}
+
+.milestoneLeft {
+  flex: 0 0 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex: 0 0 36px;
+  }
+}
+
+.stepNumber {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  letter-spacing: var(--ls-wide);
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background: var(--color-bg);
+  position: relative;
+  z-index: 1;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (max-width: 768px) {
+    width: 36px;
+    height: 36px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.milestoneContent {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.milestoneTitle {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.milestoneDesc {
+  font-size: var(--fs-body);
+  color: var(--color-muted);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-top: clamp(3rem, 6vh, 6rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1.5rem;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statNumber {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: var(--fw-black);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}

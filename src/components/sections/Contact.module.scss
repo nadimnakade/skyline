@@ -1,0 +1,219 @@
+.contact {
+  position: relative;
+  padding: var(--section-padding) 0;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.wireframeBg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0.5;
+
+  svg {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 8rem);
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem;
+  }
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  padding-left: 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.25rem;
+    height: 1px;
+    background: var(--color-primary);
+  }
+}
+
+.headline {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-black);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.description {
+  font-size: var(--fs-body);
+  color: var(--color-muted);
+  line-height: 1.8;
+  max-width: 450px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoLabel {
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.infoValue {
+  font-size: var(--fs-body);
+  color: var(--color-text);
+}
+
+.formWrap {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  outline: none;
+  transition: border-color var(--transition-fast);
+  letter-spacing: var(--ls-normal);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  &:focus {
+    border-color: var(--color-primary);
+  }
+
+  option {
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+}
+
+.formSelect {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23D4AF37' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 2.5rem;
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-text);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s var(--ease-out-expo);
+    z-index: 0;
+  }
+
+  span, svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}

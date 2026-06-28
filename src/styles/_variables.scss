@@ -1,0 +1,61 @@
+:root {
+  --color-bg: #060606;
+  --color-surface: #111111;
+  --color-primary: #D4AF37;
+  --color-secondary: #F5F3EF;
+  --color-text: #FFFFFF;
+  --color-muted: #9A9A9A;
+  --color-accent: #C89F3D;
+  --color-success: #8BC34A;
+
+  --font-primary: 'Neue Haas Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Neue Haas Grotesk', 'Inter', sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --fs-hero: clamp(3.5rem, 10vw, 11.25rem);
+  --fs-h1: clamp(2.5rem, 6vw, 7.5rem);
+  --fs-h2: clamp(2rem, 4vw, 5rem);
+  --fs-h3: clamp(1.5rem, 3vw, 3rem);
+  --fs-h4: clamp(1.25rem, 2vw, 2rem);
+  --fs-body: 1.125rem;
+  --fs-small: 0.875rem;
+  --fs-btn: 0.875rem;
+
+  --lh-tight: 1;
+  --lh-heading: 1.1;
+  --lh-body: 1.6;
+
+  --ls-wide: 0.12em;
+  --ls-normal: 0.02em;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  --space-2xl: 12rem;
+  --space-3xl: 16rem;
+
+  --section-padding: clamp(6rem, 12vh, 12rem);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --z-cursor: 9999;
+  --z-nav: 1000;
+  --z-overlay: 500;
+  --z-modal: 1000;
+
+  --transition-fast: 0.2s var(--ease-out-expo);
+  --transition-medium: 0.5s var(--ease-out-expo);
+  --transition-slow: 0.8s var(--ease-out-expo);
+}
