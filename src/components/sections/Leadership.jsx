@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from '../../utils/gsap';
 import styles from './Leadership.module.scss';
+import shahidImg from '../../assets/team/ShahidKhan.png';
 
 const leaders = [
   {
     name: 'Shahid Khan',
     role: 'Founder & CEO',
     bio: 'With over two decades of vision and leadership, Shahid has transformed Skyline Builders from a local construction firm into an internationally recognized name in luxury real estate.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80',
+    image: shahidImg,
   },
   {
     name: 'Sohel Khan',

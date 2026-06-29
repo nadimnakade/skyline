@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '../../utils/gsap';
+import shahidImg from '../../assets/team/ShahidKhan.png';
 import styles from './Team.module.scss';
 
 const team = [
@@ -8,7 +9,7 @@ const team = [
     role: 'CEO',
     title: 'Owner',
     bio: 'Visionary leader with decades of experience shaping luxury skylines. His passion for excellence and relentless pursuit of perfection drives every project from concept to completion.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80',
+    image: shahidImg,
     initial: 'SK',
   },
   {
