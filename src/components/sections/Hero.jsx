@@ -1,6 +1,5 @@
-import { useEffect, useRef, Suspense } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from '../../utils/gsap';
-import SkylineScene from '../three/SkylineScene';
 import styles from './Hero.module.scss';
 
 export default function Hero() {
@@ -98,10 +97,29 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.play().catch(() => {});
+    }
+  }, []);
+
   return (
     <section ref={sectionRef} className={styles.hero} id="hero">
-      <div className={styles.canvasContainer}>
-        <SkylineScene />
+      <div className={styles.videoContainer}>
+        <video
+          ref={videoRef}
+          className={styles.video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
       </div>
 
       <div className={styles.fogLayer} aria-hidden="true" />
