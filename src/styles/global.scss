@@ -25,6 +25,7 @@ body {
   background-color: var(--color-bg);
   overflow-x: hidden;
   letter-spacing: var(--ls-normal);
+  transition: background-color 0.5s var(--ease-out-expo), color 0.5s var(--ease-out-expo);
 }
 
 body.is-loading {

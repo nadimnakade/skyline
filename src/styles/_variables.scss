@@ -59,3 +59,14 @@
   --transition-medium: 0.5s var(--ease-out-expo);
   --transition-slow: 0.8s var(--ease-out-expo);
 }
+
+[data-theme='light'] {
+  --color-bg: #F5F3EF;
+  --color-surface: #FFFFFF;
+  --color-primary: #C89F3D;
+  --color-secondary: #1A1A1A;
+  --color-text: #111111;
+  --color-muted: #6A6A6A;
+  --color-accent: #D4AF37;
+  --color-success: #7CB342;
+}

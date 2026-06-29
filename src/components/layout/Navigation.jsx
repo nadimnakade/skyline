@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from '../../utils/gsap';
 import logoImg from '../../assets/logo.PNG';
+import ThemeToggle from '../ui/ThemeToggle';
 import styles from './Navigation.module.scss';
 
 const navLinks = [
@@ -77,9 +78,12 @@ export default function Navigation() {
             ))}
           </div>
 
-          <a href="#contact" className={styles.cta} onClick={(e) => handleNavClick(e, '#contact')}>
-            Inquire
-          </a>
+          <div className={styles.actions}>
+            <ThemeToggle />
+            <a href="#contact" className={styles.cta} onClick={(e) => handleNavClick(e, '#contact')}>
+              Inquire
+            </a>
+          </div>
 
           <button
             className={`${styles.burger} ${menuOpen ? styles.open : ''}`}

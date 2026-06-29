@@ -5,10 +5,10 @@
   width: 100%;
   z-index: var(--z-nav);
   padding: 1.5rem 3rem;
-  transition: all 0.6s var(--ease-out-expo);
+  transition: all 0.6s var(--ease-out-expo), background-color 0.5s var(--ease-out-expo), border-color 0.5s var(--ease-out-expo);
 
   &.scrolled {
-    background: rgba(6, 6, 6, 0.9);
+    background: var(--color-surface);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 1rem 3rem;
@@ -39,6 +39,16 @@
 .links {
   display: flex;
   gap: 2.5rem;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 
   @media (max-width: 1024px) {
     display: none;

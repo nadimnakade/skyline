@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
 import SmoothScroll from './context/SmoothScroll';
 import Navigation from './components/layout/Navigation';
 import Cursor from './components/ui/Cursor';
@@ -28,22 +29,24 @@ export default function App() {
   }, []);
 
   return (
-    <SmoothScroll>
-      <Cursor />
-      <Navigation />
-      <main>
-        <Hero />
-        <Story />
-        <Vision />
-        <Projects />
-        <Experience />
-        <WhyChoose />
-        <Leadership />
-        <Team />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </SmoothScroll>
+    <ThemeProvider>
+      <SmoothScroll>
+        <Cursor />
+        <Navigation />
+        <main>
+          <Hero />
+          <Story />
+          <Vision />
+          <Projects />
+          <Experience />
+          <WhyChoose />
+          <Leadership />
+          <Team />
+          <Testimonials />
+          <Contact />
+        </main>
+        <Footer />
+      </SmoothScroll>
+    </ThemeProvider>
   );
 }
