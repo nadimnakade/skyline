@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from '../../utils/gsap';
 import styles from './Leadership.module.scss';
-import shahidImg from '../../assets/team/ShahidKhan.png';
+import shahidImg from '../../assets/team/ShahidKhanOffice.png';
 
 const leaders = [
   {

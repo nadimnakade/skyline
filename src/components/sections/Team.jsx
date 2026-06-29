@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '../../utils/gsap';
-import shahidImg from '../../assets/team/ShahidKhan.png';
+import shahidImg from '../../assets/team/ShahidKhanOffice.png';
 import styles from './Team.module.scss';
 
 const team = [
