@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react';
 import { gsap } from '../../utils/gsap';
 import shahidImg from '../../assets/team/ShahidKhan1.png';
 import styles from './Team.module.scss';
-import nadeemImg from '../../assets/team/NadeemNakade.png';
+import nadeemImg from '../../assets/team/Naddy.png';
 import sohelImg from '../../assets/team/SohelKhan.png';
+
 const team = [
   {
     name: 'Shahid Khan',

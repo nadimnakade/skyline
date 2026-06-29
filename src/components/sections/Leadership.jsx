@@ -3,6 +3,7 @@ import { gsap } from '../../utils/gsap';
 import styles from './Leadership.module.scss';
 import shahidImg from '../../assets/team/ShahidKhan.png';
 import sohelImg from '../../assets/team/SohelKhan.png';
+
 const leaders = [
   {
     name: 'Shahid Khan',
