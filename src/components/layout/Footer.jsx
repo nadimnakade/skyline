@@ -65,7 +65,7 @@ export default function Footer() {
                 <span className={styles.linkGroupTitle}>Company</span>
                 <a href="#story">Story</a>
                 <a href="#vision">Vision</a>
-                <a href="#leadership">Leadership</a>
+                <a href="#team">Our Team</a>
                 <a href="#contact">Careers</a>
               </div>
 

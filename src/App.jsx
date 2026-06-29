@@ -9,6 +9,7 @@ import Projects from './components/sections/Projects';
 import Experience from './components/sections/Experience';
 import WhyChoose from './components/sections/WhyChoose';
 import Leadership from './components/sections/Leadership';
+import Team from './components/sections/Team';
 import Testimonials from './components/sections/Testimonials';
 import Contact from './components/sections/Contact';
 import Footer from './components/layout/Footer';
@@ -38,6 +39,7 @@ export default function App() {
         <Experience />
         <WhyChoose />
         <Leadership />
+        <Team />
         <Testimonials />
         <Contact />
       </main>
