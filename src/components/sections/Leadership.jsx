@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from '../../utils/gsap';
 import styles from './Leadership.module.scss';
-import shahidImg from '../../assets/team/ShahidKhanOffice.png';
-
+import shahidImg from '../../assets/team/ShahidKhan.png';
+import sohelImg from '../../assets/team/SohelKhan.png';
 const leaders = [
   {
     name: 'Shahid Khan',
@@ -14,7 +14,7 @@ const leaders = [
     name: 'Sohel Khan',
     role: 'Partner & Director',
     bio: 'Sohel brings an unmatched eye for detail and operational excellence. His commitment to quality ensures every project meets the exacting standards that define the Skyline name.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    image: sohelImg,
   },
 ];
 

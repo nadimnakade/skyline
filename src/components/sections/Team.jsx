@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '../../utils/gsap';
-import shahidImg from '../../assets/team/ShahidKhanOffice.png';
+import shahidImg from '../../assets/team/ShahidKhan1.png';
 import styles from './Team.module.scss';
-
+import nadeemImg from '../../assets/team/NadeemNakade.png';
+import sohelImg from '../../assets/team/SohelKhan.png';
 const team = [
   {
     name: 'Shahid Khan',
@@ -17,7 +18,7 @@ const team = [
     role: 'Resource Manager & Site Manager',
     title: 'Partner',
     bio: 'Operational mastermind ensuring every build meets the exacting standards that define the Skyline name. From resource allocation to on-site execution, Sohel oversees it all.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    image: sohelImg,
     initial: 'SO',
   },
   {
@@ -25,7 +26,7 @@ const team = [
     role: 'IT Manager',
     title: 'Technology Lead',
     bio: 'Driving digital innovation behind the scenes — from project management systems to cutting-edge construction technology that keeps Skyline ahead of the curve.',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80',
+    image: nadeemImg,
     initial: 'NN',
   },
   {
